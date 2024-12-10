@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+  
+}
+@layer components {
+  body {
+    @apply bg-bgl dark:bg-bgd
+  }
+
+  .left-section {
+    @apply 
+      w-12 md:w-2/6 h-full 
+      flex flex-col justify-start items-center md:items-start 
+      mr-2 p-2 md:p-5;
+  }
+  .middle-section {
+    @apply w-full xl:w-1/2 border border-bc overflow-y-auto scroll-hidden;
+  }
+  .right-section {
+    @apply hidden xl:block xl:w-1/3 p-2;
+  }
+
+  .link {
+    @apply 
+      w-full 
+      hover:text-primary hover:bg-hl dark:hover:bg-hds
+      rounded-full py-1 pl-2 md:pl-5 flex items-center 
+      duration-200 cursor-pointer;
+  }
+  .link-active {
+    @apply text-primary;
+  }
+  .link-text {
+    @apply hidden md:block font-medium text-base;
+  }
+
+  .button {
+    @apply bg-primary hover:bg-primary-hover 
+    text-tpd duration-200 font-medium rounded-full;
+  }
+
+  .user-info {
+    @apply 
+    hover:bg-hl dark:hover:bg-hds
+      border border-bc rounded-full
+      flex justify-between items-center
+      w-full mt-auto md:px-2 md:py-1 
+      duration-200;
+  }
+
+  .header {
+    @apply bg-bgl dark:bg-bgd flex justify-between 
+      items-center p-4 border border-bc sticky top-0;
+  }
+
+  .tweet-btn {
+    @apply flex items-center gap-2 duration-200 cursor-pointer;
+  }
+
+  .search-input {
+    @apply 
+      w-full py-1 pl-10 pr-2
+      text-tpl dark:text-tpd bg-bgs dark:bg-bgd
+      border border-bc outline-none rounded-full;
+  }
+  .happens-section {
+    @apply 
+      w-full mt-2 
+      font-medium text-lg 
+      bg-bgs dark:bg-bgds 
+      rounded-3xl overflow-hidden;
+  }
+  .happen-title {
+    @apply border-b border-bc text-tpl dark:text-tpd px-4 py-3;
+  }
+  .happen-text {
+    @apply 
+      border-b border-bc 
+    text-tpl dark:text-tpd hover:bg-hl dark:hover:bg-hds 
+      duration-200 px-4 py-3 leading-none;
+  }
+  .more-btn {
+    @apply w-full px-4 py-3 text-primary hover:bg-hl dark:hover:bg-hds  duration-200;
+  }
+
+  .follows-card {
+    @apply 
+      border-b border-bc px-4 py-3 
+    hover:bg-hl dark:hover:bg-hds 
+      flex justify-between items-center
+      duration-200;
+  }
+  .card-btn {
+    @apply 
+    border-primary border-2 hover:border-0 
+    text-primary hover:text-tpd hover:bg-primary font-bold 
+    duration-200 px-3 py-1 rounded-full;
+  }
+  .card-empty {
+    @apply border-b border-bc 
+    px-4 py-3 
+  hover:bg-hl dark:hover:bg-hds 
+    flex justify-between items-center gap-4
+    duration-200;
+  }
+  
+  .scroll-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll-hidden {
+    scrollbar-width: none;
+  }
+}
